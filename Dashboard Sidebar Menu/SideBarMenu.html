@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Menu</title>
+    <link rel="stylesheet" type="text/css" href="SideBarMenu.css">
+</head>
+<body>
+    <div class="menuToggle"></div>
+    <div class="sidebar">
+        <ul>
+            <li class="logo" style="--bg: #a9f817;">
+                <a href="#">
+                    <div class="icon">
+                        <ion-icon name="logo-apple"></ion-icon>
+                    </div>
+                    <div class="text">Website Logo</div>
+                </a>
+            </li>
+            <div class="Menulist">
+                <li style="--bg: #f44336;" class="active">
+                    <a href="#">
+                        <div class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </div>
+                        <div class="text">Home</div>
+                    </a>
+                </li>
+                <li style="--bg: #ffa117;">
+                    <a href="#">
+                        <div class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </div>
+                        <div class="text">Profile</div>
+                    </a>
+                </li>
+                <li style="--bg: #17ff49;">
+                    <a href="#">
+                        <div class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </div>
+                        <div class="text">Inbox</div>
+                    </a>
+                </li>
+                <li style="--bg: #46d1c6;">
+                    <a href="#">
+                        <div class="icon">
+                            <ion-icon name="bar-chart-outline"></ion-icon>
+                        </div>
+                        <div class="text">Analytics</div>
+                    </a>
+                </li>
+                <li style="--bg: #e417ff;">
+                    <a href="#">
+                        <div class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </div>
+                        <div class="text">Order</div>
+                    </a>
+                </li>
+                <li style="--bg: #ff4d17;">
+                    <a href="#">
+                        <div class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </div>
+                        <div class="text">Settings</div>
+                    </a>
+                </li>
+            </div>
+            <div class="bottom">
+                <li style="--bg: #333;">
+                    <a href="#">
+                        <div class="icon">
+                            <div class="imgBx">
+                                <img src="UserLogo.jpg">
+                            </div>
+                        </div>
+                        <div class="text">Saleem</div>
+                    </a>
+                </li>
+                <li style="--bg: #4917ff;">
+                    <a href="#">
+                        <div class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </div>
+                        <div class="text">Log out</div>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <!-- Copied from Ionicons site which helps to display use Ionicons in your app -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let menuToggle = document.querySelector('.menuToggle');
+        let sidebar = document.querySelector('.sidebar');
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+        }
+
+        let Menulist = document.querySelectorAll('.Menulist li');
+        function activeLink(){
+            Menulist.forEach((item) => 
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        Menulist.forEach((item) => 
+        item.addEventListener('click', activeLink));
+    </script>
+</body>
+</html>
