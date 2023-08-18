@@ -1,0 +1,29 @@
+
+// Factorial Of a Number
+    
+let n1='a' , fact = 1;
+if(isNaN(n1))
+{
+    console.log("Enter only Positive Numbers Instead of Letters")
+}
+else if(n1<0)
+{
+    console.log("Please Enter Positive Number")
+}
+else if(n1==0)
+{
+    console.log("Factorial of 0 is 1")
+}
+else if((n1%1)!==0)
+{
+    console.log("It is Double")
+}
+else
+{
+    for(let i=n1;i>=1;i--)
+    {
+        fact = fact * i;
+        
+    }
+    console.log(fact)
+}

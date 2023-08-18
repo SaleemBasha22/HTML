@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculations</title>
+    <script>
+
+        // Addition Function
+        function add()
+        {
+            let num1,num2,sum;
+            num1 = parseInt(document.getElementById("FirstNumber").value);
+            num2 = parseInt(document.getElementById("SecondNumber").value);
+            sum = num1 + num2;
+            document.getElementById("Result").value = sum;
+        }
+
+        // substraction Function
+        function subtraction()
+        {
+            let num1,num2,sub;
+            num1 = parseInt(document.getElementById("FirstNumber").value);
+            num2 = parseInt(document.getElementById("SecondNumber").value);
+            sub = num1 - num2;
+            document.getElementById("Result2").value = sub;
+        }
+
+        // Multiplication Function
+        function multiplication()
+        {
+            let num1,num2,mul;
+            num1 = parseInt(document.getElementById("FirstNumber").value);
+            num2 = parseInt(document.getElementById("SecondNumber").value);
+            mul = num1 * num2;
+            document.getElementById("Result3").value = mul;
+        }
+
+        // Division Function
+        function division()
+        {
+            let num1,num2,div;
+            num1 = parseInt(document.getElementById("FirstNumber").value);
+            num2 = parseInt(document.getElementById("SecondNumber").value);
+            div = num1 / num2;
+            document.getElementById("Result4").value = div;
+        }
+
+        // Modulus Division Function
+        function modulusDivision()
+        {
+            let num1,num2,modDiv;
+            num1 = parseInt(document.getElementById("FirstNumber").value);
+            num2 = parseInt(document.getElementById("SecondNumber").value);
+            modDiv = num1 % num2;
+            document.getElementById("Result5").value = modDiv;
+        }
+
+    </script>
+</head>
+<body>
+    <p>Enter First Number: &thinsp;<input type="number" id="FirstNumber"></p>
+    <p>Enter Second Number:&thinsp; <input type="number" id="SecondNumber"></p>
+    
+    <!-- Addition Function -->
+    <button onclick="add()" style="background-color: red;">Addition(+)</button>
+    <p>Sum =<input id="Result" style="color: red;" readonly></p>
+
+    <!-- Substrastion Function -->
+    <button onclick="subtraction()" style="background-color: blue;">Subtraction(-)</button>
+    <p>Substraction =<input id="Result2" style="color: blue;" readonly></p>
+
+    <!-- Multiplication Function -->
+    <button onclick="multiplication()" style="background-color: rgb(0, 255, 170);">Multiplication(*)</button>
+    <p >Multiplication =<input id="Result3" style="color: rgb(0,255,170);" readonly></p>
+
+    <!-- Division Function -->
+    <button onclick="division()" style="background-color: rgb(0, 183, 255);">Division(/)</button>
+    <p >Division =<input id="Result4" style="color: rgb(0, 183, 255);" readonly></p>
+
+    <!--Modulus Division Function -->
+    <button onclick="modulusDivision()" style="background-color: rgb(0, 255, 98);">ModulusDivision(%)</button>
+    <p >ModulusDivision =<input id="Result5" style="color: rgb(0, 255, 98);" readonly></p>
+</body>
+</html>

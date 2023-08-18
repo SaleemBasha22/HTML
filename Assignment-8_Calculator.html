@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Calculator</title>
+	<style>
+		body{
+			background: #BDBDBD;
+		}
+		#calcContainer{
+			top: 50%;
+			left: 50%;
+			background: #ffffff;
+			width: 80%;
+			height: auto;
+		}
+		.result-clear{
+			display: flex;
+			margin: 0;
+			padding: 0;
+		}
+		.result-clear
+		input[type=text].result{
+				display: block;
+				border: 0;
+				padding-top: 1%;
+				padding-left: 5%;
+				width: 80%;
+				height: 60px;
+				font-size: 1.4em;
+				font-family: 'roboto',sans-serif;
+			}
+			.grid-buttons{
+				/* margin: 0; */
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: center;
+				background: black;
+				border: 2px solid grey;
+			}
+			input[type=button] {
+				flex-grow: 1;
+				width: 25%;
+				height: auto;
+				padding: 4%;
+				font-size: 1.2em;
+				background: black;
+				color: white;
+			}
+			input[type=button].clear{
+				width: 27.5%;
+				background: darkcyan;
+			}
+			.grid-buttons
+			input[type=button].math{
+				background: silver;
+				border: 2px solid silver;
+			}
+	</style>
+</head>
+<body>
+	<div id="calcContainer">
+		<form name="calculator">
+			<div class="result-clear">
+				<input type="text" class="result" name="answer" readonly />
+				<input type="button" class="clear" value="AC" onclick="calculator.answer.value =''"/>
+			</div>
+			<!-- All input Buttons -->
+			<div class="grid-buttons">
+				<input type="button" value="9" onclick="calculator.answer.value += '9'"/>
+				<input type="button" value="8" onclick="calculator.answer.value +='8'"/>
+				<input type="button" value="7" onclick="calculator.answer.value +='7'"/>
+				<input type="button" class="math" value="+" onclick="calculator.answer.value +='+'"/>
+				<br>
+				<input type="button" value="6" onclick="calculator.answer.value +='6'"/>
+				<input type="button" value="5" onclick="calculator.answer.value +='5'"/>
+				<input type="button" value="4" onclick="calculator.answer.value +='4'"/>
+				<input type="button" class="math" value="-" onclick="calculator.answer.value +='-'"/>
+				<br>
+				<input type="button" value="3" onclick="calculator.answer.value +='3'"/>
+				<input type="button" value="2" onclick="calculator.answer.value +='2'"/>
+				<input type="button" value="1" onclick="calculator.answer.value +='1'"/>
+				<input type="button" class="math" value="/" onclick="calculator.answer.value +='/'"/>
+				<br>
+				<input type="button" value="." onclick="calculator.answer.value +='.'"/>
+				<input type="button" value="0" onclick="calculator.answer.value +='0'"/>
+				<input type="button" value="=" onclick="calculator.answer.value = parseInt(calculator.answer.value)"/>
+				<input type="button" class="math" value="*" onclick="calculator.answer.value +='*'"/>
+				<br>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

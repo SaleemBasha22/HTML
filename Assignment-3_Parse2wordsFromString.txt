@@ -1,0 +1,27 @@
+// Javascript Program to Parse 2 Letters words from a String
+
+var st="test -jkk jkk hii hi jk hi jk";
+var i,j,count=0;
+st=st.replaceAll("-"," ");
+st=st.replaceAll("."," ");
+var k=st.split(" ");
+for(i=0;i<k.length;i++)
+{
+    if(k[i].length==2)
+    {
+        for(j=i+1;j<k.length;j++)
+        {
+            if(k[i]==k[j])
+            {
+                k[j]=" ";
+            }
+        }
+        console.log(k[i]);
+        count++;
+    }
+    
+}
+if(count==0)
+{
+    console.log("no");
+}
